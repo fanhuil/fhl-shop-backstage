@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/index',function(){
     return 'this\'s a api index route';
 });
-Route::get('/login',[\App\Http\Controllers\AdminApi\LoginController::class,'login']);
+Route::post('/login',[\App\Http\Controllers\AdminApi\LoginController::class,'login']);
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
