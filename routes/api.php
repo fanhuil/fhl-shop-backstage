@@ -19,11 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::post('login',[\App\Http\Controllers\AdminApi\LoginController::class,'login']);
 Route::post('register', [\App\Http\Controllers\AdminApi\LoginController::class,'register']);
 
-//// 其它页面需要验证Token
-//Route::group(['middleware' => 'auth.jwt'],function(){
-//   Route::get('',function (){
-//   });
-//});
+// 其它页面需要验证Token
+Route::group(['middleware' => 'auth.jwt'],function(){
+   Route::get('index',[\App\Http\Controllers\AdminApi\IndexController::class,'index']);
+});
 
 
 
