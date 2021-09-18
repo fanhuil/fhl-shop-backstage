@@ -22,6 +22,7 @@ Route::post('register', [\App\Http\Controllers\AdminApi\LoginController::class,'
 // 其它页面需要验证Token
 Route::group(['middleware' => 'auth.jwt'],function(){
    Route::get('index',[\App\Http\Controllers\AdminApi\IndexController::class,'index']);
+   Route::post('logout',[\App\Http\Controllers\AdminApi\IndexController::class],'logout');
 });
 
 
