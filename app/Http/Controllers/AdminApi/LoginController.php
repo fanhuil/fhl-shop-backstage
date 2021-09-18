@@ -10,8 +10,6 @@ use App\Models\User;
 
 class LoginController extends Controller
 {
-    private $key = 123456;
-
     public $loginAfterSignUp = false;
 
     public function register(RegisterAuthRequest $request)
