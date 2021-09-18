@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 // 登录注册不需要验证Token
 Route::post('login',[\App\Http\Controllers\AdminApi\LoginController::class,'login']);
-Route::post('register', [\App\Http\Controllers\AdminApi\LoginController::class,'register']);
+Route::get('register', [\App\Http\Controllers\AdminApi\LoginController::class,'register']);
 
 // 其它页面需要验证Token
 Route::group(['middleware' => 'auth.jwt'],function(){

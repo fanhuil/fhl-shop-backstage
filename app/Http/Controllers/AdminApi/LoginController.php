@@ -16,6 +16,7 @@ class LoginController extends Controller
 
     public function register(RegisterAuthRequest $request)
     {
+        return $request;
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
