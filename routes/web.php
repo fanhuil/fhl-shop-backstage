@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test',function(){
-   echo '我是一个测试方法';
-});
-
+// 测试路由
+Route::get('/func',[App\Http\Controllers\Func\FuncController::class,'index']);
+Route::get('/testclosure',[App\Http\Controllers\Func\FuncController::class,'testClosure']);
+Route::get('/testarrayreduce',[App\Http\Controllers\Func\FuncController::class,'testArrayReduce']);
